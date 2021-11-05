@@ -1,0 +1,54 @@
+<html>
+  <p id="intro">Hello World!</p>
+
+  <p id="info">JavaScript on The DOM</p>
+
+  <img
+    id="lhl-logo"
+    src="https://cl.ly/2O3Y2w1R2j0v/Image%202016-07-20%20at%201.16.13%20PM.png"
+    width="400"
+  />
+  <br />
+  <input id="name" />
+
+  <!-- SCRIPTS -->
+  <script>
+    /*
+	TODO:
+  
+  	1. Create an empty variable, `elm`
+  	2. Find an element with the ID `info` and set the variable `elm` with its value
+    3. Change the contents of that elements to say `JavaScript Rocks!`
+*/
+
+    let elm;
+
+    elm = document.querySelector("#info");
+
+    elm.innerHTML = "JavaScript Rocks!";
+  </script>
+
+  <script>
+    // TODO:
+    // 1. Select the element who's attributes you'd like to change and set it to a variable
+    // 2. Change the width attribute of that element to 200 instead of the default 400 that it starts with in the HTML
+    // 3. Set a 1 second delay, then change it back to 400
+
+    let elm2 = document.querySelector("#lhl-logo");
+
+    elm2.width = "200";
+
+    setTimeout(() => {
+      elm2.width = "400";
+    }, 1000);
+  </script>
+
+  <script>
+    // TODO:
+    // 1. Find the input element by the ID using the `querySelector` DOM method
+    // 2. Set the `placeholder` attribute to some text value
+    let elm3 = document.querySelector("#name");
+
+    elm3.setAttribute("placeholder", "Andre");
+  </script>
+</html>
